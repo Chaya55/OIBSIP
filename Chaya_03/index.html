@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <h1>Password Generator</h1>
+      <p class="subtitle">Create strong, secure passwords instantly.</p>
+
+      <div class="password-box">
+        <input id="password" type="text" readonly aria-label="Generated password">
+        <button id="copyBtn" title="Copy password">Copy</button>
+      </div>
+      <div id="status" class="status"></div>
+
+      <div class="control">
+        <div class="label-row">
+          <label for="length">Password Length</label>
+          <span id="lengthValue">16</span>
+        </div>
+        <input id="length" type="range" min="4" max="64" value="16">
+      </div>
+
+      <div class="options">
+        <label><input id="uppercase" type="checkbox" checked> Uppercase letters (A-Z)</label>
+        <label><input id="lowercase" type="checkbox" checked> Lowercase letters (a-z)</label>
+        <label><input id="numbers" type="checkbox" checked> Numbers (0-9)</label>
+        <label><input id="symbols" type="checkbox" checked> Symbols (!@#$...)</label>
+      </div>
+
+      <div class="strength">
+        <div class="strength-header">
+          <span>Strength</span>
+          <strong id="strengthText">Strong</strong>
+        </div>
+        <div class="meter"><span id="meterBar"></span></div>
+      </div>
+
+      <button id="generateBtn" class="generate">Generate Password</button>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
