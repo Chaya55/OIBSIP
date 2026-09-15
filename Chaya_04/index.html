@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WeatherNow - Full Stack Weather App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>☁️ WeatherNow</h1>
+      <p>Search any city for current weather and a 5-day forecast.</p>
+    </header>
+
+    <section class="search-box">
+      <input id="cityInput" type="text" placeholder="Enter city name..." autocomplete="off">
+      <button id="searchBtn">Search</button>
+      <button id="locationBtn" class="secondary">📍 Use My Location</button>
+    </section>
+
+    <p id="status" class="status"></p>
+
+    <section id="currentWeather" class="weather-card hidden"></section>
+    <section id="forecast" class="forecast hidden"></section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
